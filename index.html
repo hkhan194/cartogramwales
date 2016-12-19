@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+
+<link rel="icon" type="image/gif" href="assets/img/wales.gif" />
+<title>Cartogram</title>
+
+
+<link href="assets/css/bootstrap.css" rel="stylesheet" />
+<link href="assets/css/font-awesome.css" rel="stylesheet" />
+<link href="assets/css/style.css" rel="stylesheet" />
+<!-- CSS for Cartogram-->
+<link rel="stylesheet" type="text/css" href="CountyStyle.css">
+
+<script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
+<script src="map.js" type="text/javascript"></script>
+
+
+<style>
+
+.search-county {
+	margin-left: 500px;
+	margin-top: 20px;
+}
+
+.search-county input {
+	box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+#xSlider, #ySlider {
+	box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.2);
+}
+
+.datatable {
+	width: 50%;
+	margin: auto;
+	margin-top: 40px;
+	box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+}
+
+.button button {
+	margin-top: 10px;
+	margin-left: 360px;
+	box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+}
+
+        .manual
+        {
+            font-family: "Open Sans" Sans-serif;
+            font-size: 20px;
+            padding: 40px;
+            margin: 50px 80px 60px 10px;
+            margin-left: 450px;
+            width: 1300px;
+
+            height: 450px;
+
+
+            background-color: #F3F3F2;
+            
+            
+            box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+        }
+
+
+#map-view {
+display: none;
+}
+</style>
+
+<!-- hide cartogram-->
+	<script>
+		$(function() 
+		{
+			$("#cartobutton").click(function() {
+			$("#map-view").show();
+			$(".manual").hide();	
+			});
+		});
+	</script>
+
+
+</head>
+<body>
+
+	
+	<header>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<h2>Cartogram Generator Of Wales</h2>
+					<strong>Email: </strong>hkhan194@gmail.com
+				</div>
+
+			</div>
+		</div>
+	</header>
+
+	
+
+	<section class="menu-section">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<div class="navbar-collapse collapse ">
+						<ul id="menu-top" class="nav navbar-nav navbar-right">
+							<li><a href="user.html">User Manual</a></li>
+							<li><a class="menu-top-active" href="index.html">Cartogram</a></li>
+							
+						</ul>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</section>
+
+	
+	<div class="manual">
+
+    	<h2>  Dear User, </h2><br>
+
+    	<p> The table below generate random numbers, <b>Please read the table data first  and input your votes </b>. You can put your own figures for the number of voters or, you can use this<a href="http://www.bbc.co.uk/news/special/election2011/region/html/wales.stm" target=blank> <b>site</b> </a> as your reference. <br> After you done inputting your data on the table <b> press view cartogram.</b> After viewing the cartogram please answer the questions in this <a href="https://docs.google.com/forms/d/1WID6GN0IyBYvEIWyE1ryt14-oQIWpdRPTEA7WGP63U4/viewform" target=blank><b>survey</b></a></p>
+
+    	It is dynamic mapping, you can change your input as you wish. You can view height distortion according to the total number of votes for each county. County with the highest total votes has the highest perspective. Use the sliders to control the angle of rotation and for better depth. 
+
+	</div>
+
+
+	<table id="datatable">
+		<thead>
+			<tr>
+				<th style="background-color: #DB70B8">Counties</th>
+				<th style="background-color: #FFAD33"><input type="text"
+					value="Liberal Democrate" /></th>
+				<th style="background-color: #FF4D4D"><input type="text"
+					value="Labour" /></th>
+				<th style="background-color: #0099FF"><input type="text"
+					value="Conservative" /></th>
+				<th style="background-color: #33CC33"><input type="text"
+					value="Plaid Cymru" /></th>
+				<th style="background-color: grey"><input type="text"
+					value="Others" /></th>
+			</tr>
+		</thead>
+		<tbody>
+
+		</tbody>
+	</table>
+
+	</div>
+
+                    <table class="flat-table">
+                        <tbody>
+                         <tr>
+                            <th style="background-color: #DB70B8 ">Counties</th>
+                            <th style="background-color: #FFAD33">Liberal Democrate</th>
+                            <th style="background-color: #FF4D4D">Labour</th>
+                            <th style="background-color: #0099FF">Conservative</th>
+                            <th style="background-color: #33CC33">Plaid Cymru</th>
+                            <th style="background-color: grey">Others</th>
+                        </tr>
+                        
+                        <tr>
+                              <td>GlamorgenShire</td>
+                              <td>3000</td>
+                              <td>2000</td>
+                              <td>2240</td>
+                              <td>111</td>
+                              <td>400</td>
+                        </tr>
+   
+                        <tr>
+                          <td>Example 6</td>
+                          <td>Example 7</td>
+                          <td>Example 8</td>
+                          <td>Example 9</td>
+                          <td>Example 10</td>
+                          <td>Example 11</td>
+                        </tr>
+
+                        <tr>
+                          <td>Example 6</td>
+                          <td>Example 7</td>
+                          <td>Example 8</td>
+                          <td>Example 9</td>
+                          <td>Example 10</td>
+                          <td>Example 11</td>
+                        </tr>
+
+                        <tr>
+                          <td>Example 6</td>
+                          <td>Example 7</td>
+                          <td>Example 8</td>
+                          <td>Example 9</td>
+                          <td>Example 10</td>
+                          <td>Example 11</td>
+                        </tr>
+
+                        <tr>
+                          <td>Example 6</td>
+                          <td>Example 7</td>
+                          <td>Example 8</td>
+                          <td>Example 9</td>
+                          <td>Example 10</td>
+                          <td>Example 11</td>
+                        </tr>
+
+                        <tr>
+                          <td>Example 6</td>
+                          <td>Example 7</td>
+                          <td>Example 8</td>
+                          <td>Example 9</td>
+                          <td>Example 10</td>
+                          <td>Example 11</td>
+                        </tr>
+
+                        <tr>
+                          <td>Example 6</td>
+                          <td>Example 7</td>
+                          <td>Example 8</td>
+                          <td>Example 9</td>
+                          <td>Example 10</td>
+                          <td>Example 11</td>
+                        </tr>
+
+                        <tr>
+                          <td>Example 6</td>
+                          <td>Example 7</td>
+                          <td>Example 8</td>
+                          <td>Example 9</td>
+                          <td>Example 10</td>
+                          <td>Example 11</td>
+                        </tr>
+
+                        <tr>
+                          <td>Example 6</td>
+                          <td>Example 7</td>
+                          <td>Example 8</td>
+                          <td>Example 9</td>
+                          <td>Example 10</td>
+                          <td>Example 11</td>
+                        </tr>
+
+                        <tr>
+                          <td>Example 6</td>
+                          <td>Example 7</td>
+                          <td>Example 8</td>
+                          <td>Example 9</td>
+                          <td>Example 10</td>
+                          <td>Example 11</td>
+                        </tr>
+
+                        <tr>
+                          <td>Example 6</td>
+                          <td>Example 7</td>
+                          <td>Example 8</td>
+                          <td>Example 9</td>
+                          <td>Example 10</td>
+                          <td>Example 11</td>
+                        </tr>
+
+                        <tr>
+                          <td>Example 6</td>
+                          <td>Example 7</td>
+                          <td>Example 8</td>
+                          <td>Example 9</td>
+                          <td>Example 10</td>
+                          <td>Example 11</td>
+                        </tr>
+
+                        <tr>
+                          <td>Example 6</td>
+                          <td>Example 7</td>
+                          <td>Example 8</td>
+                          <td>Example 9</td>
+                          <td>Example 10</td>
+                          <td>Example 11</td>
+                        </tr>
+
+                      </tbody>
+                    </table>
+                
+               
+     
+
+        </div>
+
+	
+
+
+	<button id="cartobutton">View Cartogram</button>
+
+	
+
+
+	<div id="map-view">
+		<div id="map-view-within">
+			<div id="map-wrapper">
+				<div id="map-wrapper-x">
+					<div id="map-wrapper-y">
+						<div id="map">
+							<!--  <img src="counties/wales.svg" id="Wales"> -->
+							<img src="counties/carmarthenshire.svg" id="Carmarthenshire" class="county">
+							<img src="counties/pembrokeshire.svg" id="Pembrokeshire" class="county">
+							<img src="counties/cardiganshire.svg" id="Cardiganshire" class="county">
+							<img src="counties/breckockshire.svg" id="Breckockshire" class="county">
+							<img src="counties/montgomeryshire.svg" id="Montgomeryshire" class="county">
+							<img src="counties/flintshire.svg" id="Flintshire" class="county">
+							<img src="counties/merionethshire.svg" id="Merionethshire" class="county">
+							<img src="counties/anglesey.svg" id="Anglesey" class="county">
+							<img src="counties/caernarvonshire.svg" id="Caernarfonshire" class="county">
+							<img src="counties/glamorgenshire.svg" id="Glamorganshire" class="county">
+							<img src="counties/denbighshire.svg" id="Denbighshire" class="county">
+							<img src="counties/monmouthshire.svg" id="Monmouthshire" class="county">
+						</div>
+					</div>
+				</div>
+			</div>
+			
+
+			<!--  Sliders -->
+			<div class="">
+				<input min="0" max="70" id="ySlider" orient="vertical"
+					class="vertical" step="auto" value="45" type="range">
+			</div>
+		
+		</div>
+		
+			<div id="xSlider-wrapper">
+				<input id="xSlider" type="range" min="-70" max="70" step="auto"
+				value="45" />
+			</div>
+
+	</div>
+	</div>
+
+
+</body>
+</html>

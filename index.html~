@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+
+<link rel="icon" type="image/gif" href="assets/img/wales.gif" />
+<title>Cartogram</title>
+
+
+<link href="assets/css/bootstrap.css" rel="stylesheet" />
+<link href="assets/css/font-awesome.css" rel="stylesheet" />
+<link href="assets/css/style.css" rel="stylesheet" />
+<!-- CSS for Cartogram-->
+<link rel="stylesheet" type="text/css" href="CountyStyle.css">
+
+<script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
+<script src="map.js" type="text/javascript"></script>
+
+
+<style>
+
+.search-county {
+	margin-left: 500px;
+	margin-top: 20px;
+}
+
+.search-county input {
+	box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+#xSlider, #ySlider {
+	box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.2);
+}
+
+.datatable {
+	width: 50%;
+	margin: auto;
+	margin-top: 40px;
+	box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+}
+
+.button button {
+	margin-top: 10px;
+	margin-left: 360px;
+	box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+}
+
+        .manual
+        {
+            font-family: "Open Sans" Sans-serif;
+            font-size: 20px;
+            padding: 40px;
+            margin: 50px 80px 60px 10px;
+            margin-left: 450px;
+            width: 1300px;
+            height: 450px;
+
+
+            background-color: #F3F3F2;
+            
+            
+            box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+        }
+
+
+#map-view {
+display: none;
+}
+</style>
+
+
+<script>
+$("#cartobutton").click(function() {
+	$("#map-view").show();
+	$(".manual").hide();	
+});
+
+</script>
+
+
+</head>
+<body>
+
+	<header>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<h2>Cartogram Generator Of Wales</h2>
+					<strong>Email: </strong>hkhan194@gmail.com
+				</div>
+
+			</div>
+		</div>
+	</header>
+
+	<section class="menu-section">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<div class="navbar-collapse collapse ">
+						<ul id="menu-top" class="nav navbar-nav navbar-right">
+							<li><a href="user.html">User Manual</a></li>
+							<li><a class="menu-top-active" href="index.html">Cartogram</a></li>
+							
+						</ul>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</section>
+
+<div class="manual">
+
+    <h2>  Dear User, </h2><br>
+
+    <p>First, read the dry table on this page. After you are finished with the table, please go to the <b>Cartogram</b> page and try out the cartogram. The data you read on this page is the same on the Cartogram page but with graphical illustration. The County with the highest number of votes has the highest height.<b> You can alter the figures on the table as you wish. </b>   
+
+    <br><br>
+
+    You can use this  <a href="http://www.bbc.co.uk/news/special/election2011/region/html/wales.stm" target="blank"><b>figures</b></a> or this <a href="https://docs.google.com/spreadsheet/ccc?key=0AonYZs4MzlZbdFhWNElkNFQyNmYxaTlyV2pOX1liRXc&hl=en#gid=0" target = "blank"><b>spreedsheet</b></a> as your reference. After you are finished with the Cartogram please answer this <a href="https://docs.google.com/forms/d/1WID6GN0IyBYvEIWyE1ryt14-oQIWpdRPTEA7WGP63U4/viewform" target="blank"><b>survey</b></a> questions to give your thoughts and opinions on your expericence with this application overall.
+
+    <br><br>
+
+
+
+    <p>Sincerely, <br>Hasan Khan <br>Developer</p>
+
+</div>
+
+
+	<table id="datatable">
+		<thead>
+			<tr>
+				<th style="background-color: #DB70B8">Counties</th>
+				<th style="background-color: #FFAD33"><input type="text"
+					value="Liberal Democrate" /></th>
+				<th style="background-color: #FF4D4D"><input type="text"
+					value="Labour" /></th>
+				<th style="background-color: #0099FF"><input type="text"
+					value="Conservative" /></th>
+				<th style="background-color: #33CC33"><input type="text"
+					value="Plaid Cymru" /></th>
+				<th style="background-color: grey"><input type="text"
+					value="Others" /></th>
+			</tr>
+		</thead>
+		<tbody>
+
+		</tbody>
+	</table>
+
+	<button id="cartobutton">View Cartogram</button>
+
+	<div id="map-view">
+		<div id="map-view-within">
+			<div id="map-wrapper">
+				<div id="map-wrapper-x">
+					<div id="map-wrapper-y">
+						<div id="map">
+							<!--  <img src="counties/wales.svg" id="Wales"> -->
+							<img src="counties/carmarthenshire.svg" id="Carmarthenshire" class="county">
+							<img src="counties/pembrokeshire.svg" id="Pembrokeshire" class="county">
+							<img src="counties/cardiganshire.svg" id="Cardiganshire" class="county">
+							<img src="counties/breckockshire.svg" id="Breckockshire" class="county">
+							<img src="counties/montgomeryshire.svg" id="Montgomeryshire" class="county">
+							<img src="counties/flintshire.svg" id="Flintshire" class="county">
+							<img src="counties/merionethshire.svg" id="Merionethshire" class="county">
+							<img src="counties/anglesey.svg" id="Anglesey" class="county">
+							<img src="counties/caernarvonshire.svg" id="Caernarfonshire" class="county">
+							<img src="counties/glamorgenshire.svg" id="Glamorganshire" class="county">
+							<img src="counties/denbighshire.svg" id="Denbighshire" class="county">
+							<img src="counties/monmouthshire.svg" id="Monmouthshire" class="county">
+						</div>
+					</div>
+				</div>
+			</div>
+			
+
+
+			<div class="">
+				<input min="0" max="70" id="ySlider" orient="vertical"
+					class="vertical" step="auto" value="45" type="range">
+			</div>
+		</div>
+		
+		<div id="xSlider-wrapper">
+			<input id="xSlider" type="range" min="-70" max="70" step="auto"
+				value="45" />
+		</div>
+
+	</div>
+	</div>
+
+	<svg height="0" xmlns="http://www.w3.org/2000/svg">
+ <filter id="drop-shadow">
+    <feGaussianBlur in="SourceAlpha" stdDeviation="[radius]"/>
+    <feOffset dx="[offset-x]" dy="[offset-y]" result="offsetblur"/>
+    <feFlood flood-color="[color]"/>
+    <feComposite in2="offsetblur" operator="in"/>
+    <feMerge>
+      <feMergeNode/>
+      <feMergeNode in="SourceGraphic"/>
+    </feMerge>
+  </filter>
+</svg>
+
+
+	
+
+</body>
+</html>

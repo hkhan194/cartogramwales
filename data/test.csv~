@@ -1,0 +1,23 @@
+{
+	"columns":[
+		"Liberal Democrate",
+		"Labour",
+		"Conservative",
+		"Plaid Cymru",
+		"Others"
+	],
+	"data": {
+		"Pembrokeshire":[265,25,675,881,817],
+		"Carmarthenshire":[,920,67,298,492,29],
+		"Cardiganshire":[467,740,524,204,679],
+		"Breckockshire":[537,286,190,468,599],
+		"Montgomeryshire":[819,778,965,843,350],
+		"Flintshire":[649,534,556,44,414],
+		"Merionethshire":[970,785,784,580,50],
+		"Anglesey":[503,811,627,750,745],
+		"Caernarfonshire":[789,950,503,304,479],
+		"Glamorganshire":[717,699,627,893,561],
+		"Denbighshire":[327,902,559,863,308],
+		"Monmouthshire":[104,783,857,741,395]
+	}
+}
